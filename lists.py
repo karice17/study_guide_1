@@ -47,9 +47,19 @@ def long_words(words):
 
     #loop through word in words
     #create empty list of long_words
-    #if len of word >= 4 return word
+    #if len of word >= 4 add word to long_words list
+    #return long_words
+    long_words = []
+    
+    for word in words:
+        if len(word) > 4:
+            long_words.append(word)
 
-    return ['the wrong thing']
+    return long_words
+
+
+long_words(["hello", "a", "b", "hi", "muffin", "muffin"])
+    
 
 
 def n_long_words(words, n):
