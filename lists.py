@@ -186,8 +186,23 @@ def word_lengths(words):
         >>> word_lengths(["hello", "hey", "hello", "spam"])
         [5, 3, 5, 4]
     """
+    #create empty list word_lengths
+    #for each word in words
+    #get length of word
+    #add length to list
+    #return the list
 
-    return []
+    compile_word_lengths = []
+
+    for word in words:
+        length = len(word)
+        compile_word_lengths.append(length)
+    
+    return compile_word_lengths
+
+word_lengths(["hello", "hey", "hello", "spam"])
+
+
 
 
 def sum_numbers(numbers):
@@ -206,7 +221,17 @@ def sum_numbers(numbers):
         0
     """
 
-    return None
+    #define variable at 0 running_total = 0
+    #loop through each num in numbers
+    #add that number to the running_total
+    #return running_total
+
+    running_total = 0
+
+    for num in numbers:
+        running_total += num
+
+    return running_total
 
 
 def mult_numbers(numbers):
@@ -229,7 +254,22 @@ def mult_numbers(numbers):
         1
     """
 
-    return None
+    # set running_total = 1
+    # loop through each number in numbers
+    # multiply it by the running_total
+    #return running_total
+
+    running_total = 1
+
+    if bool(numbers) is True:
+        for num in numbers:
+            running_total *= num
+
+    return running_total
+
+
+
+
 
 
 def join_strings(words):
@@ -248,7 +288,20 @@ def join_strings(words):
         ''
     """
 
-    return "Not the right thing"
+ 
+    #create empty string running_string = ""
+    #loop through each word in words
+    #add each word to the end of running_string
+    #return string
+
+    running_string = ""
+
+    for word in words:
+        running_string += word
+
+    return running_string
+
+
 
 
 def average(numbers):
@@ -269,8 +322,30 @@ def average(numbers):
     (Think of the best way to handle an empty input list, though,
     a feel free to provide a good solution here.)
     """
+    #if bool(numbers) = True
+    #set sum_of_all_numbers = 0
+    #count how many numbers are in the list len(numbers)
+    #loop through each num in numbers and add it to sum_of_all_numbers
+    #divide sum_of_all_numbers by len(numbers)
+    #return as a float
+    #else print "there is nothing average in nothing. Please enter some numbers to find the average."
 
-    return 0
+    if bool(numbers) is True:
+        sum_of_all_numbers = 0
+        total_numbers = len(numbers)
+        
+        for num in numbers:
+            sum_of_all_numbers += num
+
+        avg_of_numbers = sum_of_all_numbers / total_numbers
+
+    else:
+        print("I cannot give you an average of an empty list")
+
+    return avg_of_numbers
+
+        
+
 
 
 def join_strings_with_comma(words):
@@ -290,7 +365,11 @@ def join_strings_with_comma(words):
         'Pretzel'
     """
 
-    return ""
+    return ", ".join(words)
+
+
+    
+    
 
 
 def reverse_list(items):
