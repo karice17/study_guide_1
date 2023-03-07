@@ -167,7 +167,15 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    return []
+    all_nums_halved = []
+
+    for n in numbers:
+        div_by_2 = n / 2
+        all_nums_halved.append(float(div_by_2))
+
+    return all_nums_halved
+
+halvesies([2, 6, -2])
 
 
 def word_lengths(words):
