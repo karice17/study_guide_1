@@ -393,7 +393,8 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    
+    return items[:: -1]
 
 
 def reverse_list_in_place(items):
@@ -416,7 +417,14 @@ def reverse_list_in_place(items):
         ['I', 'love', 'cookies']
     """
 
-    return []
+    #for each item in the list in the range (length of list //2)
+    #example len = 3 3//2 = 1
+    for i in range(len(items) // 2):         
+        temp = items[i]   #variable temp = items at index 1
+        items[i] = items[(i + 1) * -1]  #items at i = items at (-(I+1))  items[1] = items[-2]
+        items[(i + 1) * -1] = temp
+
+  
 
 
 def duplicates(items):
@@ -442,8 +450,22 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    return []
+    #create empty list repeat
+    #use sorted on items to list alphabetically
+    #for each word in the range 1 - length of list (start at 1 b/c 0 not a duplicate bc it's the first)
+     #if the word at index 1 == word at index 0 then it's a repeat
+    #if the word is not in the repeat list
 
+    repeats = []
+
+    items = sorted(items) #creates a new list, keeps original list as is
+
+    for i in range(1, len(items)):
+        if items[i] == items[i-1]:
+            if items[i] not in repeats:
+                repeats.append(items[i])
+
+    return repeats
 
 def find_letter_indices(words, letter):
     """Return list of indices where letter appears in each word.
