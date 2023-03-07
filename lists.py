@@ -111,8 +111,19 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
+    #numbers come in an arguement [-5, 2, -5, 7]
+    #check if list is empty and set variable to None
+    #loop through each number in the list
+    # if it's none then smallest is none
+    #or if it's a number, then check it against the previous number in the loop
 
-    return 100
+    smallest = None
+
+    for n in numbers:
+        if smallest is None or n < smallest:
+            smallest = n
+
+    return smallest
 
 
 def largest_int(numbers):
@@ -131,8 +142,14 @@ def largest_int(numbers):
         >>> largest_int([]) is None
         True
     """
+    largest = None
 
-    return 0
+    for n in numbers:
+        if largest is None or n > largest:
+            largest = n
+
+    return largest
+    
 
 
 def halvesies(numbers):
