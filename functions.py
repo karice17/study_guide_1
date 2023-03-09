@@ -82,15 +82,24 @@ def hello_world():
 #    prints "Hi" followed by the name.
 
 def say_hi(name):
+    '''Greet a user using their name'''
     print(f"Hi {name}")
 
 
 # 3. Write a function called 'print_product' that takes two integers and
 #    multiplies them together. Print the result.
 
+def print_product(num1, num2):
+    '''Multiple two integers'''
+    print(num1 * num2)
+
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer
 #    and prints the string that many times
+def repeat_string(string1, num1):
+    '''Print a string by the number of times specified in the argument'''
+    print(string1 * num1)
+
 
 
 # 5. Write a function called 'print_sign' that takes an integer and prints
