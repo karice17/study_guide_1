@@ -120,9 +120,17 @@ def print_sign(num1):
 #    returns a boolean (True or False), depending on whether the number is
 #    evenly divisible by 3.
 
+def is_divisible_by_three(num1):
+    '''Return true if number is divisible by 3'''
+    if num1 / 3:
+        return True
 
 # 7. Write a function called 'num_spaces' that takes a sentence as one string
 #    and returns the number of spaces.
+
+def num_spaces(sentence):
+    '''Count spaces in a text string'''
+    return sentence.count(" ")
 
 
 # 8. Write a function called 'total_meal_price' that can be passed a meal price
