@@ -492,6 +492,8 @@ def find_letter_indices(words, letter):
     `None`.)
     """
 
+    
+
     return []
 
 
